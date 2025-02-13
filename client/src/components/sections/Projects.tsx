@@ -5,28 +5,22 @@ import { FaGithub } from "react-icons/fa";
 
 const projects = [
   {
-    title: "Animal Deterrence Using IoT and ML",
-    description: "Current 6th-semester project integrating AI-driven wildlife intrusion detection system.",
-    tags: ["IoT", "Machine Learning", "Python"],
-    github: "https://github.com/Chaitanya_09/animal-deterrence"
-  },
-  {
-    title: "Disease Prediction Using ML",
-    description: "Google Colab-based project for health diagnostics using machine learning algorithms.",
+    title: "Disease Prediction using ML Models",
+    description: "Machine learning project for predicting diseases using various ML algorithms and health diagnostics data.",
     tags: ["Machine Learning", "Python", "Healthcare"],
-    github: "https://github.com/Chaitanya_09/disease-prediction"
+    github: "https://github.com/ChaituThombare/Disease-Prediction-using-Machine-Learning-Models"
   },
   {
-    title: "Housing Data ML Model",
-    description: "Regression-based price prediction system for real estate market analysis.",
-    tags: ["Data Science", "Python", "Regression"],
-    github: "https://github.com/Chaitanya_09/housing-prediction"
+    title: "SVM Mini Project",
+    description: "Implementation of Support Vector Machine (SVM) algorithm for classification tasks.",
+    tags: ["Machine Learning", "Python", "SVM"],
+    github: "https://github.com/ChaituThombare/SVM-mini-project"
   },
   {
-    title: "Emotion Detection App",
-    description: "Flask-based real-time sentiment analysis application using computer vision.",
-    tags: ["Flask", "OpenCV", "Deep Learning"],
-    github: "https://github.com/Chaitanya_09/emotion-detection"
+    title: "Number Guess Game",
+    description: "Interactive number guessing game implementation showcasing programming logic and user interaction.",
+    tags: ["Python", "Game Development"],
+    github: "https://github.com/ChaituThombare/Number-Guess-Game"
   }
 ];
 

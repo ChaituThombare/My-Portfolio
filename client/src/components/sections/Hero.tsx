@@ -3,6 +3,10 @@ import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 
 export function Hero() {
+  const scrollToProjects = () => {
+    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="min-h-[90vh] flex flex-col justify-center">
       <motion.div
@@ -41,7 +45,11 @@ export function Hero() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Button size="lg" className="group bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+            <Button 
+              size="lg" 
+              className="group bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
+              onClick={scrollToProjects}
+            >
               View Projects
               <motion.span
                 className="ml-2"
