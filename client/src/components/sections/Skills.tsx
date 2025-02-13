@@ -2,22 +2,27 @@ import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { SiPython, SiCplusplus, SiTensorflow,
          SiKeras, SiNumpy, SiPandas, SiMysql, SiMongodb,
-         SiGit } from "react-icons/si";
+         SiGit, SiC, SiScikitlearn, SiSqlite } from "react-icons/si";
+import { DiJava } from "react-icons/di";
 
 const skills = [
   { category: "Programming Languages", items: [
     { name: "Python", icon: SiPython },
     { name: "C++", icon: SiCplusplus },
+    { name: "C", icon: SiC },
+    { name: "Java", icon: DiJava },
   ]},
   { category: "Machine Learning & AI", items: [
     { name: "TensorFlow", icon: SiTensorflow },
     { name: "Keras", icon: SiKeras },
     { name: "NumPy", icon: SiNumpy },
     { name: "Pandas", icon: SiPandas },
+    { name: "scikit-learn", icon: SiScikitlearn },
   ]},
   { category: "Databases", items: [
     { name: "MySQL", icon: SiMysql },
     { name: "MongoDB", icon: SiMongodb },
+    { name: "SQLite", icon: SiSqlite },
   ]},
   { category: "Tools", items: [
     { name: "Git/GitHub", icon: SiGit },
@@ -35,7 +40,8 @@ export function Skills() {
       >
         <motion.h2
           className="text-4xl md:text-5xl font-bold text-center font-space-grotesk
-            bg-gradient-to-r from-amber-600 via-orange-600 to-red-600
+            dark:bg-gradient-to-r dark:from-amber-600 dark:via-orange-600 dark:to-red-600
+            bg-gradient-to-r from-[#020024] via-[#f7a44b] to-[#a0ff20]
             bg-clip-text text-transparent"
         >
           Skills & Tech Stack
