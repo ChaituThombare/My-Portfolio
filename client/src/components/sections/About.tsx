@@ -74,19 +74,14 @@ export function About() {
                 ease: "linear"
               }}
             >
-              <motion.div
-                className="absolute inset-2 rounded-full bg-background flex items-center justify-center"
-                animate={{
-                  scale: [1, 1.05, 1],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              >
-                <span className="text-6xl">🤖</span>
-              </motion.div>
+              <motion.img
+                src="/Chaitanya.jpg"
+                alt="Chaitanya Thombare"
+                className="w-full h-full object-cover"
+                initial={{ scale: 1.2, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.6 }}
+              />
             </motion.div>
           </motion.div>
         </div>

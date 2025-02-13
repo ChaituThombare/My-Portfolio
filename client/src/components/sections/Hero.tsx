@@ -79,7 +79,7 @@ export function Hero() {
               className="border-2"
               asChild
             >
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="/MyResume.pdf" target="_blank" rel="noopener noreferrer">
                 View Resume
               </a>
             </Button>
