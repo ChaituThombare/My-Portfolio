@@ -1,33 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
-import { useState, useRef } from "react";
 
 export function Hero() {
-  const [resumeFile, setResumeFile] = useState<string | null>(null);
-  const fileInputRef = useRef<HTMLInputElement>(null);
-
   const scrollToProjects = () => {
     document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handleResumeUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setResumeFile(reader.result as string);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
-  const handleResumeClick = () => {
-    if (resumeFile) {
-      window.open(resumeFile);
-    } else {
-      fileInputRef.current?.click();
-    }
   };
 
   return (
@@ -96,20 +73,15 @@ export function Hero() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <input
-              type="file"
-              accept=".pdf,.doc,.docx"
-              className="hidden"
-              ref={fileInputRef}
-              onChange={handleResumeUpload}
-            />
             <Button 
               size="lg" 
               variant="outline" 
               className="border-2"
-              onClick={handleResumeClick}
+              asChild
             >
-              {resumeFile ? "View Resume" : "Upload Resume"}
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                View Resume
+              </a>
             </Button>
           </motion.div>
         </div>
