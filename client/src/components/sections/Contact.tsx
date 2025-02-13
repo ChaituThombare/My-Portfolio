@@ -13,7 +13,10 @@ export function Contact() {
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ type: "spring", stiffness: 100 }}
-          className="text-4xl md:text-5xl font-bold text-center font-space-grotesk bg-gradient-to-r from-violet-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent"
+          className="text-4xl md:text-5xl font-bold text-center font-space-grotesk
+            dark:bg-gradient-to-r dark:from-violet-600 dark:via-indigo-600 dark:to-purple-600
+            bg-gradient-to-r from-[#020024] via-[#f7a44b] to-[#a0ff20]
+            bg-clip-text text-transparent"
         >
           Let's Connect
         </motion.h2>
