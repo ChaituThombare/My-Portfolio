@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { SiPython, SiCplusplus, SiTensorflow, 
-         SiKeras, SiNumpy, SiPandas, SiMysql, SiMongodb, 
+import { SiPython, SiCplusplus, SiTensorflow,
+         SiKeras, SiNumpy, SiPandas, SiMysql, SiMongodb,
          SiGit } from "react-icons/si";
 
 const skills = [
@@ -33,10 +33,10 @@ export function Skills() {
         transition={{ duration: 0.6 }}
         className="space-y-8 max-w-full overflow-x-hidden"
       >
-        <motion.h2 
-          className="text-3xl font-bold text-center 
-            bg-gradient-to-r from-primary via-purple-500 to-blue-500 
-            bg-clip-text text-transparent animate-gradient"
+        <motion.h2
+          className="text-4xl md:text-5xl font-bold text-center font-space-grotesk
+            bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600
+            bg-clip-text text-transparent"
         >
           Skills & Tech Stack
         </motion.h2>
@@ -47,7 +47,7 @@ export function Skills() {
               key={category.category}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ 
+              transition={{
                 duration: 0.5,
                 delay: index * 0.1
               }}
@@ -59,7 +59,7 @@ export function Skills() {
                     {category.items.map((skill) => (
                       <motion.div
                         key={skill.name}
-                        whileHover={{ 
+                        whileHover={{
                           scale: 1.05,
                           transition: { duration: 0.2 }
                         }}

@@ -27,34 +27,39 @@ export function About() {
       >
         <motion.h2 
           variants={itemVariants}
-          className="text-3xl font-bold text-center font-space-grotesk 
-            bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 
+          className="text-4xl md:text-5xl font-bold text-center font-space-grotesk 
+            bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 
             bg-clip-text text-transparent"
         >
           About Me
         </motion.h2>
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
-          <motion.div
-            variants={itemVariants}
-          >
+          <motion.div variants={itemVariants}>
             <Card className="backdrop-blur-sm bg-background/60">
               <CardContent className="p-6">
-                <motion.p 
-                  variants={itemVariants}
-                  className="text-lg leading-relaxed font-poppins"
-                >
-                  I'm a Computer Science Engineering student with a deep passion for Machine Learning, 
-                  Artificial Intelligence, and emerging technologies. My journey in tech is driven by 
-                  curiosity and a desire to create meaningful solutions.
+                <motion.p variants={itemVariants} className="text-lg leading-relaxed font-poppins mb-4">
+                  I'm a <span className="font-semibold">Computer Science Engineering student</span> with 
+                  a deep passion for <span className="font-semibold">Machine Learning, Artificial Intelligence, 
+                  and emerging technologies</span>. My journey in tech is driven by curiosity and a desire 
+                  to create meaningful solutions.
                 </motion.p>
-                <motion.p 
-                  variants={itemVariants}
-                  className="text-lg leading-relaxed mt-4 font-poppins"
-                >
-                  When I'm not coding, I like to explore new technologies, listen to music, and enjoy gaming. 
-                  My diverse interests help me maintain a creative and balanced approach to problem-solving.
-                </motion.p>
+                <motion.div variants={itemVariants} className="space-y-4">
+                  <h3 className="text-xl font-semibold mb-2">What I Do</h3>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li>I specialize in <span className="font-medium">Machine Learning & AI</span>, working on projects that solve real-world problems.</li>
+                    <li>I have experience with <span className="font-medium">Python, TensorFlow/Keras, NumPy, and AI-driven development</span>.</li>
+                    <li>I am continuously exploring new technologies and expanding my skill set.</li>
+                  </ul>
+                </motion.div>
+                <motion.div variants={itemVariants} className="mt-6">
+                  <h3 className="text-xl font-semibold mb-2">Interests & Hobbies</h3>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li>Exploring new technologies to stay updated with industry trends</li>
+                    <li>Listening to music, especially deep and impactful tracks</li>
+                    <li>Gaming as a way to unwind and sharpen problem-solving skills</li>
+                  </ul>
+                </motion.div>
               </CardContent>
             </Card>
           </motion.div>
