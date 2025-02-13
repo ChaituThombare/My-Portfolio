@@ -61,6 +61,19 @@ export function Contact() {
     },
   });
 
+  const bounceVariants = {
+    hidden: { y: 50, opacity: 0 },
+    visible: { 
+      y: 0, 
+      opacity: 1,
+      transition: {
+        type: "spring",
+        bounce: 0.6,
+        duration: 1
+      }
+    }
+  };
+
   return (
     <section id="contact" className="py-20">
       <motion.div
@@ -69,27 +82,44 @@ export function Contact() {
         transition={{ duration: 0.6 }}
         className="space-y-8"
       >
-        <h2 className="text-3xl font-bold text-center">Get in Touch</h2>
+        <motion.h2 
+          variants={bounceVariants}
+          initial="hidden"
+          whileInView="visible"
+          className="text-3xl font-bold text-center"
+        >
+          Get in Touch
+        </motion.h2>
 
         <div className="grid md:grid-cols-2 gap-8">
           <motion.div
-            initial={{ x: -50 }}
-            whileInView={{ x: 0 }}
-            transition={{ duration: 0.6 }}
+            variants={bounceVariants}
+            initial="hidden"
+            whileInView="visible"
           >
             <Card>
               <CardHeader>
                 <CardTitle>Contact Information</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                {socials.map((social) => (
+                {socials.map((social, index) => (
                   <motion.a
                     key={social.name}
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 text-lg hover:text-primary"
-                    whileHover={{ x: 5 }}
+                    whileHover={{ 
+                      scale: 1.05,
+                      x: 10,
+                      transition: { type: "spring", stiffness: 400 }
+                    }}
+                    initial={{ x: -30, opacity: 0 }}
+                    whileInView={{
+                      x: 0,
+                      opacity: 1,
+                      transition: { delay: index * 0.2 }
+                    }}
                   >
                     <social.icon className="w-6 h-6" />
                     <span>{social.name}</span>
@@ -100,9 +130,9 @@ export function Contact() {
           </motion.div>
 
           <motion.div
-            initial={{ x: 50 }}
-            whileInView={{ x: 0 }}
-            transition={{ duration: 0.6 }}
+            variants={bounceVariants}
+            initial="hidden"
+            whileInView="visible"
           >
             <Card>
               <CardHeader>

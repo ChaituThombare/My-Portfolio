@@ -33,17 +33,37 @@ export function Projects() {
         transition={{ duration: 0.6 }}
         className="space-y-8"
       >
-        <h2 className="text-3xl font-bold text-center">Projects</h2>
+        <motion.h2 
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ type: "spring", stiffness: 100 }}
+          className="text-3xl font-bold text-center"
+        >
+          Projects
+        </motion.h2>
 
         <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              initial={{ 
+                scale: 0.8,
+                x: index % 2 === 0 ? -100 : 100,
+                opacity: 0 
+              }}
+              whileInView={{ 
+                scale: 1,
+                x: 0,
+                opacity: 1 
+              }}
+              transition={{ 
+                duration: 0.8,
+                delay: index * 0.2,
+                type: "spring",
+                bounce: 0.4
+              }}
             >
-              <Card className="h-full">
+              <Card className="h-full hover:shadow-lg transition-all duration-300">
                 <CardHeader>
                   <CardTitle>{project.title}</CardTitle>
                   <CardDescription>{project.description}</CardDescription>
@@ -51,18 +71,24 @@ export function Projects() {
                 <CardContent>
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map(tag => (
-                      <span
+                      <motion.span
                         key={tag}
+                        whileHover={{ scale: 1.1 }}
                         className="px-2 py-1 bg-primary/10 text-primary rounded-full text-sm"
                       >
                         {tag}
-                      </span>
+                      </motion.span>
                     ))}
                   </div>
                 </CardContent>
                 <CardFooter>
                   <Button variant="outline" asChild>
-                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                    <a 
+                      href={project.github} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="flex items-center gap-2"
+                    >
                       <FaGithub className="w-5 h-5" />
                       View on GitHub
                     </a>
