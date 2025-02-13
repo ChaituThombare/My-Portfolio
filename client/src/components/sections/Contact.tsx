@@ -86,7 +86,7 @@ export function Contact() {
           variants={bounceVariants}
           initial="hidden"
           whileInView="visible"
-          className="text-4xl md:text-5xl font-bold text-center font-space-grotesk bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 bg-clip-text text-transparent"
+          className="text-4xl md:text-5xl font-bold text-center font-space-grotesk bg-gradient-to-r from-cyan-600 via-emerald-600 to-teal-600 bg-clip-text text-transparent"
         >
           Get in Touch
         </motion.h2>
