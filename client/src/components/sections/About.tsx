@@ -28,7 +28,7 @@ export function About() {
         <motion.h2 
           variants={itemVariants}
           className="text-4xl md:text-5xl font-bold text-center font-space-grotesk 
-            bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 
+            bg-gradient-to-r from-rose-600 via-purple-600 to-blue-600 
             bg-clip-text text-transparent"
         >
           About Me
@@ -39,21 +39,21 @@ export function About() {
             <Card className="backdrop-blur-sm bg-background/60">
               <CardContent className="p-6">
                 <motion.p variants={itemVariants} className="text-lg leading-relaxed font-poppins mb-4">
-                  I'm a <span className="font-semibold">Computer Science Engineering student</span> with 
-                  a deep passion for <span className="font-semibold">Machine Learning, Artificial Intelligence, 
+                  I'm a <span className="bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent font-semibold">Computer Science Engineering student</span> with 
+                  a deep passion for <span className="bg-gradient-to-r from-violet-500 to-purple-500 bg-clip-text text-transparent font-semibold">Machine Learning, Artificial Intelligence, 
                   and emerging technologies</span>. My journey in tech is driven by curiosity and a desire 
                   to create meaningful solutions.
                 </motion.p>
                 <motion.div variants={itemVariants} className="space-y-4">
-                  <h3 className="text-xl font-semibold mb-2">What I Do</h3>
+                  <h3 className="text-xl font-semibold mb-2 bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent">What I Do</h3>
                   <ul className="list-disc pl-5 space-y-2">
-                    <li>I specialize in <span className="font-medium">Machine Learning & AI</span>, working on projects that solve real-world problems.</li>
-                    <li>I have experience with <span className="font-medium">Python, TensorFlow/Keras, NumPy, and AI-driven development</span>.</li>
+                    <li>I specialize in <span className="bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent font-medium">Machine Learning & AI</span>, working on projects that solve real-world problems.</li>
+                    <li>I have experience with <span className="bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent font-medium">Python, TensorFlow/Keras, NumPy, and AI-driven development</span>.</li>
                     <li>I am continuously exploring new technologies and expanding my skill set.</li>
                   </ul>
                 </motion.div>
                 <motion.div variants={itemVariants} className="mt-6">
-                  <h3 className="text-xl font-semibold mb-2">Interests & Hobbies</h3>
+                  <h3 className="text-xl font-semibold mb-2 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent">Interests & Hobbies</h3>
                   <ul className="list-disc pl-5 space-y-2">
                     <li>Exploring new technologies to stay updated with industry trends</li>
                     <li>Listening to music, especially deep and impactful tracks</li>
