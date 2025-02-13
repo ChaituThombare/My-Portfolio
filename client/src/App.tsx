@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { Footer } from "@/components/layout/Footer";
 
 function Router() {
   return (
@@ -20,6 +21,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <ThemeProvider defaultTheme="system" storageKey="ui-theme">
         <Router />
+        <Footer />
         <Toaster />
       </ThemeProvider>
     </QueryClientProvider>
