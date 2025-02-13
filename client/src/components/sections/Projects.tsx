@@ -37,7 +37,9 @@ export function Projects() {
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ type: "spring", stiffness: 100 }}
-          className="text-3xl font-bold text-center"
+          className="text-4xl md:text-5xl font-bold text-center font-space-grotesk 
+            bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 
+            bg-clip-text text-transparent"
         >
           Projects
         </motion.h2>
