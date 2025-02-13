@@ -7,7 +7,7 @@ import { Contact } from "@/components/sections/Contact";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800">
+    <div className="min-h-screen bg-[linear-gradient(120deg,rgba(2,0,36,1)_0%,rgba(118,23,212,1)_67%,rgba(0,212,255,1)_100%)]">
       <Navbar />
       <main className="container mx-auto px-4 pt-16">
         <Hero />

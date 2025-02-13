@@ -18,59 +18,82 @@ export function About() {
     }
   };
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
+
   return (
     <section id="about" className="py-20">
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
         className="space-y-8"
       >
-        <h2 className="text-3xl font-bold text-center font-space-grotesk 
-          bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 
-          bg-clip-text text-transparent">
+        <motion.h2 
+          variants={itemVariants}
+          className="text-3xl font-bold text-center font-space-grotesk 
+            bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 
+            bg-clip-text text-transparent"
+        >
           About Me
-        </h2>
+        </motion.h2>
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <motion.div
-            initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6 }}
+            variants={itemVariants}
           >
             <Card className="backdrop-blur-sm bg-background/60">
               <CardContent className="p-6">
-                <p className="text-lg leading-relaxed font-poppins">
+                <motion.p 
+                  variants={itemVariants}
+                  className="text-lg leading-relaxed font-poppins"
+                >
                   I'm a Computer Science Engineering student with a deep passion for Machine Learning, 
                   Artificial Intelligence, and emerging technologies. My journey in tech is driven by 
                   curiosity and a desire to create meaningful solutions.
-                </p>
-                <p className="text-lg leading-relaxed mt-4 font-poppins">
+                </motion.p>
+                <motion.p 
+                  variants={itemVariants}
+                  className="text-lg leading-relaxed mt-4 font-poppins"
+                >
                   When I'm not coding, I like to explore new technologies, listen to music, and enjoy gaming. 
                   My diverse interests help me maintain a creative and balanced approach to problem-solving.
-                </p>
+                </motion.p>
               </CardContent>
             </Card>
           </motion.div>
 
           <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6 }}
             className="flex flex-col items-center gap-4"
+            variants={itemVariants}
           >
-            <div className="relative w-64 h-64 rounded-full overflow-hidden">
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
-                animate={{
-                  rotate: [0, 360],
-                }}
-                transition={{
-                  duration: 10,
-                  repeat: Infinity,
-                  ease: "linear"
-                }}
-              />
+            <motion.div 
+              className="relative w-64 h-64 rounded-full overflow-hidden"
+              animate={{
+                rotateZ: [0, 360],
+                borderColor: ["#4f46e5", "#7c3aed", "#2563eb"]
+              }}
+              transition={{
+                duration: 8,
+                repeat: Infinity,
+                ease: "linear"
+              }}
+              style={{
+                border: "4px solid"
+              }}
+            >
               {image ? (
                 <motion.img
                   src={image}
@@ -95,7 +118,7 @@ export function About() {
                   <span className="text-6xl">🤖</span>
                 </motion.div>
               )}
-            </div>
+            </motion.div>
             <input
               type="file"
               accept="image/*"
@@ -103,13 +126,15 @@ export function About() {
               ref={fileInputRef}
               onChange={handleImageUpload}
             />
-            <Button
-              variant="outline"
-              onClick={() => fileInputRef.current?.click()}
-              className="mt-4"
-            >
-              {image ? "Change Photo" : "Upload Photo"}
-            </Button>
+            <motion.div variants={itemVariants}>
+              <Button
+                variant="outline"
+                onClick={() => fileInputRef.current?.click()}
+                className="mt-4"
+              >
+                {image ? "Change Photo" : "Upload Photo"}
+              </Button>
+            </motion.div>
           </motion.div>
         </div>
       </motion.div>
