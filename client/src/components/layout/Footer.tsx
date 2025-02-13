@@ -66,7 +66,7 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-2">
           <div className="space-y-6">
             <div>
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-violet-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+              <h3 className="text-2xl font-bold bg-gradient-to-r from-[#020024] via-[#f7a44b] to-[#a0ff20] bg-clip-text text-transparent">
                 Get in Touch
               </h3>
               <p className="mt-2 text-muted-foreground">
