@@ -1,23 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { useState, useRef } from "react";
 
 export function About() {
-  const [image, setImage] = useState<string | null>(null);
-  const fileInputRef = useRef<HTMLInputElement>(null);
-
-  const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setImage(reader.result as string);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -39,7 +23,7 @@ export function About() {
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        className="space-y-8"
+        className="space-y-8 max-w-full overflow-x-hidden"
       >
         <motion.h2 
           variants={itemVariants}
@@ -80,9 +64,8 @@ export function About() {
             variants={itemVariants}
           >
             <motion.div 
-              className="relative w-64 h-64 rounded-full overflow-hidden"
+              className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-primary"
               animate={{
-                rotateZ: [0, 360],
                 borderColor: ["#4f46e5", "#7c3aed", "#2563eb"]
               }}
               transition={{
@@ -90,50 +73,20 @@ export function About() {
                 repeat: Infinity,
                 ease: "linear"
               }}
-              style={{
-                border: "4px solid"
-              }}
             >
-              {image ? (
-                <motion.img
-                  src={image}
-                  alt="Profile"
-                  className="absolute inset-2 rounded-full object-cover"
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                />
-              ) : (
-                <motion.div
-                  className="absolute inset-2 rounded-full bg-background flex items-center justify-center"
-                  animate={{
-                    scale: [1, 1.05, 1],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                >
-                  <span className="text-6xl">🤖</span>
-                </motion.div>
-              )}
-            </motion.div>
-            <input
-              type="file"
-              accept="image/*"
-              className="hidden"
-              ref={fileInputRef}
-              onChange={handleImageUpload}
-            />
-            <motion.div variants={itemVariants}>
-              <Button
-                variant="outline"
-                onClick={() => fileInputRef.current?.click()}
-                className="mt-4"
+              <motion.div
+                className="absolute inset-2 rounded-full bg-background flex items-center justify-center"
+                animate={{
+                  scale: [1, 1.05, 1],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
               >
-                {image ? "Change Photo" : "Upload Photo"}
-              </Button>
+                <span className="text-6xl">🤖</span>
+              </motion.div>
             </motion.div>
           </motion.div>
         </div>
