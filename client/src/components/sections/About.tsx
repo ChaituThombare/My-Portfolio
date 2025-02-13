@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
+import { ImageViewer } from "@/components/ui/image-viewer";
 
 export function About() {
   const containerVariants = {
@@ -28,7 +29,8 @@ export function About() {
         <motion.h2 
           variants={itemVariants}
           className="text-4xl md:text-5xl font-bold text-center font-space-grotesk 
-            bg-gradient-to-r from-rose-600 via-purple-600 to-blue-600 
+            dark:bg-gradient-to-r dark:from-rose-600 dark:via-purple-600 dark:to-blue-600
+            bg-gradient-to-r from-[#020024] via-[#f7a44b] to-[#a0ff20]
             bg-clip-text text-transparent"
         >
           About Me
@@ -79,13 +81,11 @@ export function About() {
                 ease: "linear"
               }}
             >
-              <motion.img
+              <ImageViewer
                 src="/Chaitanya.jpg"
                 alt="Chaitanya Thombare"
                 className="w-full h-full object-cover"
-                initial={{ scale: 1.2, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.6 }}
+                fullSrc="/Chaitanya.jpg"
               />
             </motion.div>
           </motion.div>
