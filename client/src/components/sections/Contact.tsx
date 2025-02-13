@@ -67,7 +67,6 @@ export function Contact() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
         className="space-y-8"
       >
         <h2 className="text-3xl font-bold text-center">Get in Touch</h2>
@@ -77,7 +76,6 @@ export function Contact() {
             initial={{ x: -50 }}
             whileInView={{ x: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
           >
             <Card>
               <CardHeader>
@@ -105,7 +103,6 @@ export function Contact() {
             initial={{ x: 50 }}
             whileInView={{ x: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
           >
             <Card>
               <CardHeader>

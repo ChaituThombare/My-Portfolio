@@ -31,7 +31,6 @@ export function Skills() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
         className="space-y-8"
       >
         <h2 className="text-3xl font-bold text-center 
@@ -52,7 +51,6 @@ export function Skills() {
                 type: "spring",
                 stiffness: 100
               }}
-              viewport={{ once: true }}
             >
               <Card className="hover:shadow-lg transition-shadow duration-300">
                 <CardContent className="p-6">
