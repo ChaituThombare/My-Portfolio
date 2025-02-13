@@ -11,6 +11,12 @@ const projects = [
     github: "https://github.com/ChaituThombare/Disease-Prediction-using-Machine-Learning-Models"
   },
   {
+    title: "Hospital Management System",
+    description: "A comprehensive hospital management system for streamlining healthcare operations and patient management.",
+    tags: ["Healthcare", "Management System", "Full Stack"],
+    github: "https://github.com/Ayush-Nimbhorkar/Hospital-Management-System"
+  },
+  {
     title: "SVM Mini Project",
     description: "Implementation of Support Vector Machine (SVM) algorithm for classification tasks.",
     tags: ["Machine Learning", "Python", "SVM"],
