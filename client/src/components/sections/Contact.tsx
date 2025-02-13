@@ -15,17 +15,17 @@ import { apiRequest } from "@/lib/queryClient";
 const socials = [
   {
     name: "GitHub",
-    url: "https://github.com/Chaitanya_09",
+    url: "https://github.com/ChaituThombare",
     icon: FaGithub,
   },
   {
     name: "LinkedIn",
-    url: "https://linkedin.com/in/chaitanya-thombare",
+    url: "https://www.linkedin.com/in/chaitannya-thombare-438b92253",
     icon: FaLinkedin,
   },
   {
     name: "Email",
-    url: "mailto:chaitanya.thombare@example.com",
+    url: "mailto:chaitannyathombare@gmail.com",
     icon: FaEnvelope,
   },
 ];
