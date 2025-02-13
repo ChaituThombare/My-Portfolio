@@ -35,7 +35,7 @@ export function Skills() {
       >
         <motion.h2
           className="text-4xl md:text-5xl font-bold text-center font-space-grotesk
-            bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600
+            bg-gradient-to-r from-amber-600 via-orange-600 to-red-600
             bg-clip-text text-transparent"
         >
           Skills & Tech Stack
