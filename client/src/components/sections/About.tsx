@@ -24,7 +24,6 @@ export function About() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
         className="space-y-8"
       >
         <h2 className="text-3xl font-bold text-center font-space-grotesk 
@@ -38,7 +37,6 @@ export function About() {
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
           >
             <Card className="backdrop-blur-sm bg-background/60">
               <CardContent className="p-6">
@@ -59,7 +57,6 @@ export function About() {
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
             className="flex flex-col items-center gap-4"
           >
             <div className="relative w-64 h-64 rounded-full overflow-hidden">
