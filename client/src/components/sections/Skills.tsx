@@ -40,7 +40,6 @@ export function Skills() {
       >
         <motion.h2
           className="text-4xl md:text-5xl font-bold text-center font-space-grotesk
-            dark:bg-gradient-to-r dark:from-amber-600 dark:via-orange-600 dark:to-red-600
             bg-gradient-to-r from-[#020024] via-[#f7a44b] to-[#a0ff20]
             bg-clip-text text-transparent"
         >
