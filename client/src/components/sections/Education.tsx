@@ -8,7 +8,7 @@ const educationData = [
     degree: "B.Tech",
     score: "CGPA: 8.778",
     type: "College",
-    imageUrl: "/ycce-logo.png" // Placeholder for the image you'll provide
+    imageUrl: "/ycce.jpeg"
   },
   {
     period: "2020 - 2022",
@@ -16,7 +16,7 @@ const educationData = [
     degree: "12th Standard",
     score: "71%",
     type: "Higher Secondary",
-    imageUrl: "/pbvv-logo.png" // Placeholder for the image you'll provide
+    imageUrl: "/pbvv.jpeg"
   },
   {
     period: "2019 - 2020",
@@ -24,7 +24,7 @@ const educationData = [
     degree: "10th Standard",
     score: "91%",
     type: "Secondary",
-    imageUrl: "/gchs-logo.png" // Placeholder for the image you'll provide
+    imageUrl: "/gcs.jpeg"
   },
 ];
 
@@ -42,7 +42,7 @@ export function Education() {
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ type: "spring", stiffness: 100 }}
           className="text-4xl md:text-5xl font-bold text-center font-space-grotesk 
-            bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 
+            bg-gradient-to-r from-[#0A9396] via-[#0A9396] to-[#0A9396] 
             bg-clip-text text-transparent"
         >
           Education
@@ -50,7 +50,7 @@ export function Education() {
 
         <div className="relative max-w-4xl mx-auto">
           {/* Timeline line - made bolder and with gradient */}
-          <div className="absolute left-0 md:left-1/2 transform -translate-x-px md:-translate-x-1/2 h-full w-1 bg-gradient-to-b from-green-600 via-emerald-600 to-teal-600" />
+          <div className="absolute left-0 md:left-1/2 transform -translate-x-px md:-translate-x-1/2 h-full w-1 bg-[#0A9396]" />
 
           {educationData.map((edu, index) => (
             <motion.div
@@ -63,12 +63,11 @@ export function Education() {
               }`}
             >
               {/* Timeline dot - made larger and with border */}
-              <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-primary border-4 border-background" />
+              <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-[#0A9396] border-4 border-background" />
 
               <Card className={`${index % 2 === 0 ? "md:col-start-1" : "md:col-start-2"} hover:shadow-lg transition-all duration-300`}>
                 <CardHeader>
                   <div className="flex items-center gap-4">
-                    {/* Image placeholder - will be replaced with actual images */}
                     <div className="w-12 h-12 rounded-full overflow-hidden bg-muted flex items-center justify-center">
                       <img
                         src={edu.imageUrl}
@@ -85,8 +84,8 @@ export function Education() {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="font-bold text-lg text-primary">{edu.degree}</p>
-                  <p className="text-primary font-semibold">{edu.score}</p>
+                  <p className="font-bold text-lg text-[#0A9396]">{edu.degree}</p>
+                  <p className="text-[#0A9396] font-semibold">{edu.score}</p>
                   <p className="text-sm text-muted-foreground">{edu.type}</p>
                 </CardContent>
               </Card>
