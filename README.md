@@ -1,4 +1,4 @@
-# Personal Portfolio - Chaitanya Thombare
+# My Portfolio - Chaitanya Thombare
 
 A modern, responsive personal portfolio website showcasing my professional skills, education, and achievements with enhanced interactive design.
 
@@ -27,8 +27,8 @@ A modern, responsive personal portfolio website showcasing my professional skill
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/ChaituThombare/Personal-Portfolio.git
-cd Personal-Portfolio
+git clone https://github.com/ChaituThombare/My-Portfolio.git
+cd My-Portfolio
 ```
 
 2. Install dependencies:
