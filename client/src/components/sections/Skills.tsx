@@ -36,7 +36,7 @@ export function Skills() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="space-y-8 max-w-full overflow-x-hidden"
+        className="space-y-8 max-w-full overflow-hidden"
       >
         <motion.h2
           className="text-4xl md:text-5xl font-bold text-center font-space-grotesk
@@ -46,7 +46,7 @@ export function Skills() {
           Skills & Tech Stack
         </motion.h2>
 
-        <div className="grid gap-6">
+        <div className="grid gap-6 overflow-hidden">
           {skills.map((category, index) => (
             <motion.div
               key={category.category}
