@@ -21,9 +21,10 @@ export function Navbar() {
         >
           Chaitanya
         </motion.span>
-        
+
         <div className="flex items-center gap-4">
           <Button variant="ghost" onClick={() => scrollToSection("about")}>About</Button>
+          <Button variant="ghost" onClick={() => scrollToSection("education")}>Education</Button>
           <Button variant="ghost" onClick={() => scrollToSection("skills")}>Skills</Button>
           <Button variant="ghost" onClick={() => scrollToSection("projects")}>Projects</Button>
           <Button variant="ghost" onClick={() => scrollToSection("contact")}>Contact</Button>
